@@ -1,4 +1,4 @@
- package com.jspiders.constructorinjection;
+ package com.jspiders.constructorinjection.example;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

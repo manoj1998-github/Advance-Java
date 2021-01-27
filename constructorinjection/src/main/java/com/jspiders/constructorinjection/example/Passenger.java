@@ -1,4 +1,4 @@
-package com.jspiders.constructorinjection;
+package com.jspiders.constructorinjection.example;
 
 public class Passenger {
 
