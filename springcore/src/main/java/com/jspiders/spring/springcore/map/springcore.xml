@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="customer"
+		class="com.jspiders.spring.springcore.map.Customer">
+
+		<property name="email" value="manojkumarcn8@gmail.com" />
+
+		<property name="product">
+			<map>
+				<entry key="101" value="pendrive" />
+
+				<entry>
+					<key>
+						<value>202</value>
+					</key>
+					<value>SmartWatch</value>
+				</entry>
+
+				<entry key="303">
+					<value>SmartPhone</value>
+				</entry>
+
+				<entry value="ipad">
+					<key>
+					
+					<value>404</value>
+					</key>
+				</entry>
+
+
+			</map>
+		</property>
+	</bean>
+</beans>
