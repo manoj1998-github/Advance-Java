@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean name="patient" class="com.jspiders.constructorinjection.hospitalmanagementsystem.Patient"
+c:id="101" c:name="neetu" c:age="21" c:gender="male" c:contact="9110450645" c:disease="cold"/>
+
+<bean name="doctor" class="com.jspiders.constructorinjection.hospitalmanagementsystem.Doctor"
+c:id="102" c:name="manoj" c:specializaion="MBBS" c:patient-ref="patient"/>
+
+
+
+<bean name="hospital" class="com.jspiders.constructorinjection.hospitalmanagementsystem.Hospital"
+c:name="fortis" c:location="banglore" c:doctor-ref="doctor" c:patient-ref="patient"/>
+
+
+
+
+</beans>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--  using value as element 
+<bean name="ticket" class="com.jspiders.constructorinjection.Ticket">
+<constructor-arg>
+<value>Bangalore</value>
+</constructor-arg>
+
+<constructor-arg>
+<value>goa</value>
+</constructor-arg>
+
+<constructor-arg>
+<value>101</value>
+</constructor-arg>
+</bean>
+
+
+// value as attribute
+<bean name="ticket" class="com.jspiders.constructorinjection.Ticket">
+<constructor-arg value="bangalore"/>
+<constructor-arg value="goa"/>
+<constructor-arg value="101"/>
+</bean>
+
+-->
+<!--  value using c-scheme -->
+
+<bean name="ticket" class="com.jspiders.constructorinjection.Ticket" 
+c:departure="bangalore" c:arrival="goa" c:id="101" ></bean>
+
+
+<bean name="passenger" class="com.jspiders.constructorinjection.Passenger">
+<constructor-arg>
+<value>manoj</value>
+</constructor-arg>
+
+<constructor-arg>
+<value>manoj@123</value>
+</constructor-arg>
+
+<constructor-arg>
+<value>12345678</value>
+</constructor-arg>
+
+<constructor-arg>
+<value>23</value>
+</constructor-arg>
+
+<constructor-arg>
+<ref bean="ticket"/>
+</constructor-arg>
+
+</bean>
+</beans>
